@@ -1,0 +1,3214 @@
+{
+  "source": "EA_E Form 2025.pdf",
+  "format": "Standard PDF AcroForm text fields",
+  "note": "Field names are ASCII and intended for programmatic access from PHP, Python, JavaScript, Java, .NET and other PDF libraries. Signature areas are text fields, not cryptographic signature fields.",
+  "files": {
+    "01_Borang_E_2025_Fillable.pdf": {
+      "source_pages": [
+        1,
+        2
+      ],
+      "fields": [
+        {
+          "name": "e_cover_employer_name",
+          "label": "Nama majikan",
+          "page": 1,
+          "rect_top_left_points": [
+            176.0,
+            97.0,
+            553.5,
+            112.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_reference_no",
+          "label": "No. rujukan / pengenalan / pasport / pendaftaran",
+          "page": 1,
+          "rect_top_left_points": [
+            176.0,
+            124.0,
+            320.5,
+            140.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_employer_tin",
+          "label": "TIN majikan",
+          "page": 1,
+          "rect_top_left_points": [
+            176.0,
+            179.5,
+            320.5,
+            195.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_address_line1",
+          "label": "Alamat surat-menyurat baris 1",
+          "page": 1,
+          "rect_top_left_points": [
+            175.0,
+            207.2,
+            554.0,
+            223.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_address_line2",
+          "label": "Alamat surat-menyurat baris 2",
+          "page": 1,
+          "rect_top_left_points": [
+            175.0,
+            224.7,
+            554.0,
+            241.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_address_line3",
+          "label": "Alamat surat-menyurat baris 3",
+          "page": 1,
+          "rect_top_left_points": [
+            175.0,
+            242.4,
+            554.0,
+            258.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_postcode",
+          "label": "Poskod",
+          "page": 1,
+          "rect_top_left_points": [
+            228.0,
+            260.1,
+            288.5,
+            277.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_city",
+          "label": "Bandar",
+          "page": 1,
+          "rect_top_left_points": [
+            342.2,
+            260.1,
+            554.3,
+            277.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_state",
+          "label": "Negeri",
+          "page": 1,
+          "rect_top_left_points": [
+            228.0,
+            278.4,
+            341.0,
+            295.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cover_country",
+          "label": "Negara",
+          "page": 1,
+          "rect_top_left_points": [
+            393.8,
+            278.4,
+            554.3,
+            295.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_basic_employer_name",
+          "label": "Nama majikan seperti didaftarkan",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            106.5,
+            552.0,
+            149.2
+          ],
+          "type": "text",
+          "multiline": true,
+          "align": "left"
+        },
+        {
+          "name": "e_basic_employer_tin",
+          "label": "TIN majikan",
+          "page": 2,
+          "rect_top_left_points": [
+            241.0,
+            150.6,
+            552.0,
+            163.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_employer_category",
+          "label": "Kategori majikan (1-6)",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            165.2,
+            239.4,
+            178.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "e_employer_status",
+          "label": "Status majikan (1-3)",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            179.9,
+            239.4,
+            193.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "e_tax_id_type_code",
+          "label": "Kod No. Pengenalan Cukai (01-13)",
+          "page": 2,
+          "rect_top_left_points": [
+            404.0,
+            194.6,
+            431.4,
+            209.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "e_tax_id_number",
+          "label": "No. Pengenalan Cukai (TIN)",
+          "page": 2,
+          "rect_top_left_points": [
+            433.0,
+            194.6,
+            552.0,
+            209.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_identification_no",
+          "label": "No. Pengenalan",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            211.0,
+            360.2,
+            224.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_passport_no",
+          "label": "No. Pasport",
+          "page": 2,
+          "rect_top_left_points": [
+            433.0,
+            211.0,
+            552.0,
+            224.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_registration_no",
+          "label": "No. pendaftaran SSM atau lain-lain",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            225.7,
+            552.0,
+            240.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_address_line1",
+          "label": "Alamat surat-menyurat baris 1",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            242.2,
+            552.0,
+            255.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_address_line2",
+          "label": "Alamat surat-menyurat baris 2",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            257.0,
+            552.0,
+            270.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_address_line3",
+          "label": "Alamat surat-menyurat baris 3",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            271.6,
+            552.0,
+            285.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_postcode",
+          "label": "Poskod",
+          "page": 2,
+          "rect_top_left_points": [
+            255.0,
+            286.4,
+            374.6,
+            299.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_city",
+          "label": "Bandar",
+          "page": 2,
+          "rect_top_left_points": [
+            447.0,
+            286.4,
+            552.0,
+            299.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_state",
+          "label": "Negeri",
+          "page": 2,
+          "rect_top_left_points": [
+            255.0,
+            301.0,
+            360.6,
+            314.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_country",
+          "label": "Negara",
+          "page": 2,
+          "rect_top_left_points": [
+            447.0,
+            301.0,
+            552.0,
+            314.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_phone",
+          "label": "No. telefon",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            315.8,
+            360.6,
+            329.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_mobile",
+          "label": "No. telefon bimbit",
+          "page": 2,
+          "rect_top_left_points": [
+            447.0,
+            315.8,
+            552.0,
+            329.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_email",
+          "label": "E-mel",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            330.5,
+            552.0,
+            343.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_cp8d_submission_method",
+          "label": "Cara Pengemukaan C.P.8D (1-2)",
+          "page": 2,
+          "rect_top_left_points": [
+            199.0,
+            345.2,
+            239.5,
+            368.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "e_a1_employee_count_31122025",
+          "label": "A1 Bilangan pekerja pada 31/12/2025",
+          "page": 2,
+          "rect_top_left_points": [
+            198.4,
+            402.1,
+            289.1,
+            421.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "e_a2_pcb_employee_count",
+          "label": "A2 Bilangan pekerja tertakluk PCB",
+          "page": 2,
+          "rect_top_left_points": [
+            453.8,
+            402.1,
+            552.0,
+            421.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "e_a3_new_employee_count",
+          "label": "A3 Bilangan pekerja baharu",
+          "page": 2,
+          "rect_top_left_points": [
+            198.4,
+            422.6,
+            289.1,
+            441.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "e_a4_ceased_or_deceased_count",
+          "label": "A4 Bilangan pekerja berhenti kerja / meninggal dunia",
+          "page": 2,
+          "rect_top_left_points": [
+            453.8,
+            422.6,
+            552.0,
+            441.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "e_a5_leaving_malaysia_count",
+          "label": "A5 Bilangan pekerja berhenti kerja untuk meninggalkan Malaysia",
+          "page": 2,
+          "rect_top_left_points": [
+            198.4,
+            443.0,
+            289.1,
+            461.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "e_a6_reported_to_lhdnm",
+          "label": "A6 Melaporkan kepada LHDNM (1=Ya, 2=Tidak)",
+          "page": 2,
+          "rect_top_left_points": [
+            453.8,
+            443.0,
+            473.7,
+            461.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "e_b1_tax_agent_name",
+          "label": "B1 Nama ejen cukai",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            487.0,
+            551.3,
+            499.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b2_tax_agent_approval_no",
+          "label": "B2 No. kelulusan ejen cukai",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            500.7,
+            551.3,
+            513.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b3_firm_name",
+          "label": "B3 Nama firma",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            517.1,
+            551.3,
+            529.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b4_firm_address_line1",
+          "label": "B4 Alamat firma baris 1",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            530.9,
+            551.3,
+            543.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b4_firm_address_line2",
+          "label": "B4 Alamat firma baris 2",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            544.7,
+            551.3,
+            557.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b4_firm_address_line3",
+          "label": "B4 Alamat firma baris 3",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            558.4,
+            551.3,
+            570.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b4_firm_postcode",
+          "label": "B4 Poskod firma",
+          "page": 2,
+          "rect_top_left_points": [
+            228.2,
+            572.2,
+            294.1,
+            584.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b4_firm_city",
+          "label": "B4 Bandar firma",
+          "page": 2,
+          "rect_top_left_points": [
+            332.8,
+            572.2,
+            551.3,
+            584.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b4_firm_state",
+          "label": "B4 Negeri firma",
+          "page": 2,
+          "rect_top_left_points": [
+            228.2,
+            585.9,
+            551.3,
+            598.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b5_firm_tin",
+          "label": "B5 TIN firma",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            599.7,
+            294.1,
+            614.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b6_firm_phone",
+          "label": "B6 No. telefon firma",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            616.2,
+            294.1,
+            628.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b7_firm_email",
+          "label": "B7 E-mel firma",
+          "page": 2,
+          "rect_top_left_points": [
+            188.6,
+            629.9,
+            294.1,
+            642.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_b8_agent_signature_text",
+          "label": "B8 Tandatangan ejen cukai (teks / nama)",
+          "page": 2,
+          "rect_top_left_points": [
+            425.6,
+            599.7,
+            551.5,
+            628.6
+          ],
+          "type": "text",
+          "multiline": true,
+          "align": "left"
+        },
+        {
+          "name": "e_b9_signature_date",
+          "label": "B9 Tarikh tandatangan",
+          "page": 2,
+          "rect_top_left_points": [
+            425.6,
+            629.9,
+            551.5,
+            642.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_c_declarant_name",
+          "label": "Saya - nama",
+          "page": 2,
+          "rect_top_left_points": [
+            71.2,
+            674.9,
+            360.6,
+            694.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_c_declarant_id_passport",
+          "label": "No. pengenalan / pasport",
+          "page": 2,
+          "rect_top_left_points": [
+            454.2,
+            674.9,
+            552.0,
+            694.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_c_date",
+          "label": "Tarikh akuan",
+          "page": 2,
+          "rect_top_left_points": [
+            71.2,
+            721.4,
+            289.1,
+            740.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_c_position",
+          "label": "Jawatan",
+          "page": 2,
+          "rect_top_left_points": [
+            71.2,
+            741.7,
+            289.1,
+            760.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "e_c_signature_text",
+          "label": "Tandatangan (teks / nama)",
+          "page": 2,
+          "rect_top_left_points": [
+            362.0,
+            721.4,
+            552.0,
+            760.7
+          ],
+          "type": "text",
+          "multiline": true,
+          "align": "left"
+        }
+      ]
+    },
+    "02_CP8D_2025_Fillable.pdf": {
+      "source_pages": [
+        3
+      ],
+      "fields": [
+        {
+          "name": "cp8d_employer_tin",
+          "label": "TIN Majikan E",
+          "page": 1,
+          "rect_top_left_points": [
+            288.5,
+            315.5,
+            543.2,
+            331.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_employer_name",
+          "label": "Nama majikan",
+          "page": 1,
+          "rect_top_left_points": [
+            288.5,
+            332.1,
+            1141.2,
+            348.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_year",
+          "label": "Saraan bagi tahun",
+          "page": 1,
+          "rect_top_left_points": [
+            288.5,
+            349.3,
+            367.7,
+            364.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r1_employee_name",
+          "label": "Row 1: Nama pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            78.6,
+            1002.0,
+            286.73,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r1_employee_tin",
+          "label": "Row 1: No. Pengenalan Cukai (TIN)",
+          "page": 1,
+          "rect_top_left_points": [
+            288.13,
+            1002.0,
+            367.48,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r1_id_passport",
+          "label": "Row 1: No. pengenalan / pasport",
+          "page": 1,
+          "rect_top_left_points": [
+            368.88,
+            1002.0,
+            543.0,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r1_employee_category",
+          "label": "Row 1: Kategori pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            544.4,
+            1002.0,
+            595.53,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r1_employee_status",
+          "label": "Row 1: Status pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            596.93,
+            1002.0,
+            645.03,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r1_retirement_contract_date",
+          "label": "Row 1: Tarikh Persaraan / Tamat Kontrak",
+          "page": 1,
+          "rect_top_left_points": [
+            646.43,
+            1002.0,
+            718.28,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r1_tax_borne_by_employer",
+          "label": "Row 1: Cukai ditanggung oleh majikan (1/2)",
+          "page": 1,
+          "rect_top_left_points": [
+            719.68,
+            1002.0,
+            803.8,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r1_eligible_children_count",
+          "label": "Row 1: Bilangan anak",
+          "page": 1,
+          "rect_top_left_points": [
+            805.2,
+            1002.0,
+            853.3,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_child_relief_amount",
+          "label": "Row 1: Jumlah pelepasan anak (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            854.7,
+            1002.0,
+            904.55,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_gross_remuneration",
+          "label": "Row 1: Jumlah saraan kasar (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            905.95,
+            1002.0,
+            953.58,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_benefits_in_kind",
+          "label": "Row 1: Manfaat berupa barangan (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            954.98,
+            1002.0,
+            1016.58,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_living_accommodation",
+          "label": "Row 1: Nilai tempat kediaman (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1017.98,
+            1002.0,
+            1078.83,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_esos",
+          "label": "Row 1: Manfaat skim opsyen saham pekerja (ESOS) (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1080.23,
+            1002.0,
+            1141.1,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_exempt_allowance",
+          "label": "Row 1: Elaun / perkuisit / pemberian / manfaat dikecualikan cukai (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1142.5,
+            1002.0,
+            1217.6,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_tp1_relief",
+          "label": "Row 1: Tuntutan potongan TP1 - pelepasan (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1219.0,
+            1002.0,
+            1270.1,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_tp1_zakat",
+          "label": "Row 1: Tuntutan potongan TP1 - zakat (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1271.5,
+            1002.0,
+            1314.6,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_epf",
+          "label": "Row 1: Caruman KWSP (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1316.0,
+            1002.0,
+            1386.63,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_zakat_payroll",
+          "label": "Row 1: Zakat melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1388.03,
+            1002.0,
+            1443.38,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_pcb",
+          "label": "Row 1: Jumlah potongan cukai - PCB (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1444.78,
+            1002.0,
+            1492.38,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_cp38",
+          "label": "Row 1: Jumlah potongan cukai - CP38 (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1493.78,
+            1002.0,
+            1540.15,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_medical_insurance",
+          "label": "Row 1: Insurans perubatan melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1541.55,
+            1002.0,
+            1600.65,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r1_socso",
+          "label": "Row 1: Caruman PERKESO melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1602.05,
+            1002.0,
+            1666.15,
+            1015.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_employee_name",
+          "label": "Row 2: Nama pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            78.6,
+            1016.3,
+            286.73,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r2_employee_tin",
+          "label": "Row 2: No. Pengenalan Cukai (TIN)",
+          "page": 1,
+          "rect_top_left_points": [
+            288.13,
+            1016.3,
+            367.48,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r2_id_passport",
+          "label": "Row 2: No. pengenalan / pasport",
+          "page": 1,
+          "rect_top_left_points": [
+            368.88,
+            1016.3,
+            543.0,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r2_employee_category",
+          "label": "Row 2: Kategori pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            544.4,
+            1016.3,
+            595.53,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r2_employee_status",
+          "label": "Row 2: Status pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            596.93,
+            1016.3,
+            645.03,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r2_retirement_contract_date",
+          "label": "Row 2: Tarikh Persaraan / Tamat Kontrak",
+          "page": 1,
+          "rect_top_left_points": [
+            646.43,
+            1016.3,
+            718.28,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r2_tax_borne_by_employer",
+          "label": "Row 2: Cukai ditanggung oleh majikan (1/2)",
+          "page": 1,
+          "rect_top_left_points": [
+            719.68,
+            1016.3,
+            803.8,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r2_eligible_children_count",
+          "label": "Row 2: Bilangan anak",
+          "page": 1,
+          "rect_top_left_points": [
+            805.2,
+            1016.3,
+            853.3,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_child_relief_amount",
+          "label": "Row 2: Jumlah pelepasan anak (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            854.7,
+            1016.3,
+            904.55,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_gross_remuneration",
+          "label": "Row 2: Jumlah saraan kasar (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            905.95,
+            1016.3,
+            953.58,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_benefits_in_kind",
+          "label": "Row 2: Manfaat berupa barangan (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            954.98,
+            1016.3,
+            1016.58,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_living_accommodation",
+          "label": "Row 2: Nilai tempat kediaman (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1017.98,
+            1016.3,
+            1078.83,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_esos",
+          "label": "Row 2: Manfaat skim opsyen saham pekerja (ESOS) (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1080.23,
+            1016.3,
+            1141.1,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_exempt_allowance",
+          "label": "Row 2: Elaun / perkuisit / pemberian / manfaat dikecualikan cukai (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1142.5,
+            1016.3,
+            1217.6,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_tp1_relief",
+          "label": "Row 2: Tuntutan potongan TP1 - pelepasan (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1219.0,
+            1016.3,
+            1270.1,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_tp1_zakat",
+          "label": "Row 2: Tuntutan potongan TP1 - zakat (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1271.5,
+            1016.3,
+            1314.6,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_epf",
+          "label": "Row 2: Caruman KWSP (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1316.0,
+            1016.3,
+            1386.63,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_zakat_payroll",
+          "label": "Row 2: Zakat melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1388.03,
+            1016.3,
+            1443.38,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_pcb",
+          "label": "Row 2: Jumlah potongan cukai - PCB (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1444.78,
+            1016.3,
+            1492.38,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_cp38",
+          "label": "Row 2: Jumlah potongan cukai - CP38 (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1493.78,
+            1016.3,
+            1540.15,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_medical_insurance",
+          "label": "Row 2: Insurans perubatan melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1541.55,
+            1016.3,
+            1600.65,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r2_socso",
+          "label": "Row 2: Caruman PERKESO melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1602.05,
+            1016.3,
+            1666.15,
+            1029.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_employee_name",
+          "label": "Row 3: Nama pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            78.6,
+            1030.8,
+            286.73,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r3_employee_tin",
+          "label": "Row 3: No. Pengenalan Cukai (TIN)",
+          "page": 1,
+          "rect_top_left_points": [
+            288.13,
+            1030.8,
+            367.48,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r3_id_passport",
+          "label": "Row 3: No. pengenalan / pasport",
+          "page": 1,
+          "rect_top_left_points": [
+            368.88,
+            1030.8,
+            543.0,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "cp8d_r3_employee_category",
+          "label": "Row 3: Kategori pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            544.4,
+            1030.8,
+            595.53,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r3_employee_status",
+          "label": "Row 3: Status pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            596.93,
+            1030.8,
+            645.03,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r3_retirement_contract_date",
+          "label": "Row 3: Tarikh Persaraan / Tamat Kontrak",
+          "page": 1,
+          "rect_top_left_points": [
+            646.43,
+            1030.8,
+            718.28,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r3_tax_borne_by_employer",
+          "label": "Row 3: Cukai ditanggung oleh majikan (1/2)",
+          "page": 1,
+          "rect_top_left_points": [
+            719.68,
+            1030.8,
+            803.8,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "cp8d_r3_eligible_children_count",
+          "label": "Row 3: Bilangan anak",
+          "page": 1,
+          "rect_top_left_points": [
+            805.2,
+            1030.8,
+            853.3,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_child_relief_amount",
+          "label": "Row 3: Jumlah pelepasan anak (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            854.7,
+            1030.8,
+            904.55,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_gross_remuneration",
+          "label": "Row 3: Jumlah saraan kasar (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            905.95,
+            1030.8,
+            953.58,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_benefits_in_kind",
+          "label": "Row 3: Manfaat berupa barangan (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            954.98,
+            1030.8,
+            1016.58,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_living_accommodation",
+          "label": "Row 3: Nilai tempat kediaman (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1017.98,
+            1030.8,
+            1078.83,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_esos",
+          "label": "Row 3: Manfaat skim opsyen saham pekerja (ESOS) (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1080.23,
+            1030.8,
+            1141.1,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_exempt_allowance",
+          "label": "Row 3: Elaun / perkuisit / pemberian / manfaat dikecualikan cukai (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1142.5,
+            1030.8,
+            1217.6,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_tp1_relief",
+          "label": "Row 3: Tuntutan potongan TP1 - pelepasan (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1219.0,
+            1030.8,
+            1270.1,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_tp1_zakat",
+          "label": "Row 3: Tuntutan potongan TP1 - zakat (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1271.5,
+            1030.8,
+            1314.6,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_epf",
+          "label": "Row 3: Caruman KWSP (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1316.0,
+            1030.8,
+            1386.63,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_zakat_payroll",
+          "label": "Row 3: Zakat melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1388.03,
+            1030.8,
+            1443.38,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_pcb",
+          "label": "Row 3: Jumlah potongan cukai - PCB (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1444.78,
+            1030.8,
+            1492.38,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_cp38",
+          "label": "Row 3: Jumlah potongan cukai - CP38 (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1493.78,
+            1030.8,
+            1540.15,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_medical_insurance",
+          "label": "Row 3: Insurans perubatan melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1541.55,
+            1030.8,
+            1600.65,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "cp8d_r3_socso",
+          "label": "Row 3: Caruman PERKESO melalui potongan gaji (RM)",
+          "page": 1,
+          "rect_top_left_points": [
+            1602.05,
+            1030.8,
+            1666.15,
+            1044.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        }
+      ]
+    },
+    "03_Borang_EA_2025_Fillable.pdf": {
+      "source_pages": [
+        4
+      ],
+      "fields": [
+        {
+          "name": "ea_serial_no",
+          "label": "No. Siri",
+          "page": 1,
+          "rect_top_left_points": [
+            94.0,
+            49.3,
+            175.0,
+            61.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_employee_tin",
+          "label": "No. Pengenalan Cukai (TIN) Pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            415.5,
+            49.8,
+            556.5,
+            61.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_employer_tin",
+          "label": "TIN Majikan E",
+          "page": 1,
+          "rect_top_left_points": [
+            94.3,
+            63.6,
+            175.2,
+            75.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_year",
+          "label": "Tahun saraan",
+          "page": 1,
+          "rect_top_left_points": [
+            366.1,
+            63.8,
+            389.0,
+            75.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "ea_lhdnm_state",
+          "label": "LHDNM Negeri",
+          "page": 1,
+          "rect_top_left_points": [
+            476.2,
+            64.1,
+            556.0,
+            75.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_employee_name",
+          "label": "A1 Nama Penuh Pekerja / Pesara",
+          "page": 1,
+          "rect_top_left_points": [
+            256.5,
+            111.5,
+            555.0,
+            122.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_position",
+          "label": "A2 Jawatan",
+          "page": 1,
+          "rect_top_left_points": [
+            143.0,
+            125.3,
+            292.5,
+            135.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_staff_no",
+          "label": "A3 No. Kakitangan / No. Gaji",
+          "page": 1,
+          "rect_top_left_points": [
+            433.0,
+            125.3,
+            556.0,
+            135.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_new_ic",
+          "label": "A4 No. K.P. Baru",
+          "page": 1,
+          "rect_top_left_points": [
+            142.2,
+            139.5,
+            291.8,
+            150.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_passport_no",
+          "label": "A5 No. Pasport",
+          "page": 1,
+          "rect_top_left_points": [
+            433.0,
+            139.5,
+            556.0,
+            150.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_epf_no",
+          "label": "A6 No. KWSP",
+          "page": 1,
+          "rect_top_left_points": [
+            142.6,
+            153.7,
+            292.2,
+            164.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_socso_no",
+          "label": "A7 No. PERKESO",
+          "page": 1,
+          "rect_top_left_points": [
+            433.0,
+            153.7,
+            556.0,
+            164.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_eligible_children_count",
+          "label": "A8 Bilangan anak yang layak untuk pelepasan cukai",
+          "page": 1,
+          "rect_top_left_points": [
+            179.5,
+            179.5,
+            289.0,
+            190.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_employment_start_date",
+          "label": "A9(a) Tarikh mula bekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            433.0,
+            182.2,
+            556.0,
+            192.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_employment_end_date",
+          "label": "A9(b) Tarikh berhenti kerja",
+          "page": 1,
+          "rect_top_left_points": [
+            433.0,
+            196.4,
+            556.0,
+            206.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b1a_gross_salary",
+          "label": "B1(a) Gaji kasar / upah / gaji cuti",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            246.2,
+            555.0,
+            256.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b1b_fees_commission_bonus",
+          "label": "B1(b) Fi / komisen / bonus",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            260.4,
+            555.0,
+            271.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b1c_other_payment_description",
+          "label": "B1(c) Perihal pembayaran",
+          "page": 1,
+          "rect_top_left_points": [
+            400.0,
+            274.6,
+            477.0,
+            285.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b1c_tips_perquisites_allowances",
+          "label": "B1(c) Tip / perkuisit / sagu hati / elaun lain",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            274.6,
+            555.0,
+            285.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b1d_tax_paid_by_employer",
+          "label": "B1(d) Cukai pendapatan dibayar majikan",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            288.9,
+            555.0,
+            299.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b1e_esos",
+          "label": "B1(e) ESOS",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            303.0,
+            555.0,
+            313.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b1f_gratuity_from",
+          "label": "B1(f) Ganjaran - dari",
+          "page": 1,
+          "rect_top_left_points": [
+            190.8,
+            317.2,
+            296.2,
+            327.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b1f_gratuity_to",
+          "label": "B1(f) Ganjaran - hingga",
+          "page": 1,
+          "rect_top_left_points": [
+            323.8,
+            317.2,
+            429.2,
+            327.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b1f_gratuity_amount",
+          "label": "B1(f) Ganjaran",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            317.2,
+            555.0,
+            327.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b2_income_type_a",
+          "label": "B2 Jenis pendapatan (a)",
+          "page": 1,
+          "rect_top_left_points": [
+            172.0,
+            345.6,
+            292.8,
+            356.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b2_income_type_b",
+          "label": "B2 Jenis pendapatan (b)",
+          "page": 1,
+          "rect_top_left_points": [
+            172.0,
+            359.8,
+            292.8,
+            370.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b2_arrears_amount",
+          "label": "B2 Bayaran tunggakan / lain-lain",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            359.8,
+            555.0,
+            370.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b3_bik_description",
+          "label": "B3 Manfaat berupa barangan - nyatakan",
+          "page": 1,
+          "rect_top_left_points": [
+            215.0,
+            374.1,
+            478.5,
+            384.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b3_bik_amount",
+          "label": "B3 Manfaat berupa barangan",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            374.1,
+            555.0,
+            384.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b4_residence_address",
+          "label": "B4 Nilai tempat kediaman - alamat",
+          "page": 1,
+          "rect_top_left_points": [
+            193.0,
+            388.2,
+            479.0,
+            398.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_b4_residence_value",
+          "label": "B4 Nilai tempat kediaman",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            388.2,
+            555.0,
+            398.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b5_unapproved_fund_refund",
+          "label": "B5 Bayaran balik KWSP / pencen tidak diluluskan",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            402.4,
+            555.0,
+            413.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_b6_loss_of_employment_compensation",
+          "label": "B6 Pampasan kehilangan pekerjaan",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            416.7,
+            555.0,
+            427.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_c1_pension",
+          "label": "C1 Pencen",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            455.2,
+            555.0,
+            465.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_c2_annuity",
+          "label": "C2 Anuiti / bayaran berkala lain",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            469.5,
+            555.0,
+            480.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_c_total",
+          "label": "C Jumlah",
+          "page": 1,
+          "rect_top_left_points": [
+            482.0,
+            482.0,
+            555.0,
+            496.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_d1_pcb",
+          "label": "D1 PCB",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            523.7,
+            555.0,
+            534.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_d2_cp38",
+          "label": "D2 CP38",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            536.9,
+            555.0,
+            547.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_d3_zakat_payroll",
+          "label": "D3 Zakat melalui potongan gaji",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            550.1,
+            555.0,
+            560.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_d4_approved_donations",
+          "label": "D4 Derma / hadiah / sumbangan diluluskan",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            563.4,
+            555.0,
+            574.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_d5a_tp1_relief",
+          "label": "D5(a) Pelepasan melalui TP1",
+          "page": 1,
+          "rect_top_left_points": [
+            356.8,
+            589.8,
+            480.0,
+            600.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_d5b_tp1_zakat",
+          "label": "D5(b) Zakat selain potongan gaji",
+          "page": 1,
+          "rect_top_left_points": [
+            356.8,
+            603.0,
+            480.0,
+            613.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_d6_child_relief",
+          "label": "D6 Jumlah pelepasan anak layak",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            616.2,
+            555.0,
+            626.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_e1_fund_name",
+          "label": "E1 Nama Kumpulan Wang",
+          "page": 1,
+          "rect_top_left_points": [
+            164.8,
+            653.8,
+            556.5,
+            664.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_e1_employee_contribution",
+          "label": "E1 Amaun caruman pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            667.0,
+            555.0,
+            677.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_e2_socso_contribution",
+          "label": "E2 PERKESO - amaun caruman pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            680.1,
+            555.0,
+            690.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_f_total_exempt_allowances",
+          "label": "F Jumlah elaun/perkuisit/manfaat dikecualikan cukai",
+          "page": 1,
+          "rect_top_left_points": [
+            487.3,
+            704.6,
+            555.0,
+            715.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ea_officer_name",
+          "label": "Nama Pegawai",
+          "page": 1,
+          "rect_top_left_points": [
+            331.2,
+            741.2,
+            554.2,
+            751.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_officer_position",
+          "label": "Jawatan Pegawai",
+          "page": 1,
+          "rect_top_left_points": [
+            331.2,
+            754.4,
+            554.2,
+            765.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_employer_name_address_1",
+          "label": "Nama dan Alamat Majikan baris 1",
+          "page": 1,
+          "rect_top_left_points": [
+            331.2,
+            767.6,
+            554.2,
+            778.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_employer_name_address_2",
+          "label": "Nama dan Alamat Majikan baris 2",
+          "page": 1,
+          "rect_top_left_points": [
+            331.2,
+            780.8,
+            554.2,
+            791.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_form_date",
+          "label": "Tarikh",
+          "page": 1,
+          "rect_top_left_points": [
+            71.7,
+            794.0,
+            185.7,
+            804.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ea_employer_phone",
+          "label": "No. Telefon Majikan",
+          "page": 1,
+          "rect_top_left_points": [
+            331.2,
+            794.0,
+            554.2,
+            804.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        }
+      ]
+    },
+    "04_Borang_EC_2025_Fillable.pdf": {
+      "source_pages": [
+        5
+      ],
+      "fields": [
+        {
+          "name": "ec_serial_no",
+          "label": "No. Siri",
+          "page": 1,
+          "rect_top_left_points": [
+            92.2,
+            56.9,
+            173.0,
+            68.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_employee_tin",
+          "label": "No. Pengenalan Cukai (TIN) Pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            416.8,
+            56.9,
+            555.8,
+            68.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_employer_tin",
+          "label": "TIN Majikan E",
+          "page": 1,
+          "rect_top_left_points": [
+            92.0,
+            71.2,
+            172.8,
+            82.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_year",
+          "label": "Tahun saraan",
+          "page": 1,
+          "rect_top_left_points": [
+            358.5,
+            71.4,
+            383.6,
+            82.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "center"
+        },
+        {
+          "name": "ec_lhdnm_state",
+          "label": "LHDNM Negeri",
+          "page": 1,
+          "rect_top_left_points": [
+            475.3,
+            71.2,
+            555.0,
+            82.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_employee_name",
+          "label": "A1 Nama Penuh Pekerja / Pesara",
+          "page": 1,
+          "rect_top_left_points": [
+            252.5,
+            120.1,
+            555.6,
+            130.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_department",
+          "label": "A2 Jabatan",
+          "page": 1,
+          "rect_top_left_points": [
+            137.7,
+            135.3,
+            556.4,
+            145.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_position",
+          "label": "A3 Jawatan",
+          "page": 1,
+          "rect_top_left_points": [
+            136.8,
+            150.5,
+            288.7,
+            161.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_staff_no",
+          "label": "A4 No. Kakitangan / No. Gaji",
+          "page": 1,
+          "rect_top_left_points": [
+            431.2,
+            150.5,
+            556.5,
+            161.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_id_police_military_passport",
+          "label": "A5 No. Kad Pengenalan / Polis / Tentera / Pasport",
+          "page": 1,
+          "rect_top_left_points": [
+            248.9,
+            165.7,
+            381.0,
+            176.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_epf_no",
+          "label": "A6 No. KWSP",
+          "page": 1,
+          "rect_top_left_points": [
+            138.6,
+            180.9,
+            288.3,
+            191.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_socso_no",
+          "label": "A7 No. PERKESO",
+          "page": 1,
+          "rect_top_left_points": [
+            431.2,
+            180.9,
+            556.5,
+            191.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_eligible_children_count",
+          "label": "A8 Bilangan anak yang layak",
+          "page": 1,
+          "rect_top_left_points": [
+            175.5,
+            208.3,
+            285.1,
+            218.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_employment_start_date",
+          "label": "A9(a) Tarikh mula bekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            431.2,
+            211.3,
+            556.5,
+            221.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_employment_end_date",
+          "label": "A9(b) Tarikh berhenti kerja",
+          "page": 1,
+          "rect_top_left_points": [
+            431.2,
+            226.5,
+            556.5,
+            237.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_b1a_salary_emolument",
+          "label": "B1(a) Gaji / emolumen",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            292.5,
+            557.0,
+            303.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_b1b_gratuity_from",
+          "label": "B1(b) Ganjaran - dari",
+          "page": 1,
+          "rect_top_left_points": [
+            187.0,
+            307.7,
+            292.2,
+            318.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_b1b_gratuity_to",
+          "label": "B1(b) Ganjaran - hingga",
+          "page": 1,
+          "rect_top_left_points": [
+            320.0,
+            307.7,
+            425.2,
+            318.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_b1b_gratuity_amount",
+          "label": "B1(b) Ganjaran",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            307.7,
+            557.0,
+            318.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_b2_bik_description",
+          "label": "B2 Manfaat Berupa Barangan - butiran",
+          "page": 1,
+          "rect_top_left_points": [
+            245.0,
+            323.0,
+            477.3,
+            333.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_b2_bik_amount",
+          "label": "B2 Manfaat Berupa Barangan",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            323.0,
+            557.0,
+            333.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_b3_travel_benefit",
+          "label": "B3 Manfaat Tambang Percutian",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            338.1,
+            557.0,
+            348.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_b4_arrears_amount",
+          "label": "B4 Bayaran tunggakan / lain-lain",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            353.3,
+            557.0,
+            363.9
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_b4_income_type_a",
+          "label": "B4 Jenis pendapatan (a)",
+          "page": 1,
+          "rect_top_left_points": [
+            174.2,
+            368.5,
+            292.9,
+            379.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_b4_income_type_b",
+          "label": "B4 Jenis pendapatan (b)",
+          "page": 1,
+          "rect_top_left_points": [
+            174.2,
+            383.7,
+            292.9,
+            394.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_b4_income_type_b_amount",
+          "label": "B4 Amaun jenis pendapatan (b)",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            383.7,
+            557.0,
+            394.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_taxable_income",
+          "label": "Pendapatan boleh dicukai",
+          "page": 1,
+          "rect_top_left_points": [
+            480.0,
+            399.0,
+            557.0,
+            412.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_c1_pcb",
+          "label": "C1 PCB",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            440.5,
+            555.3,
+            451.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_c2_cp38",
+          "label": "C2 CP38",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            455.7,
+            555.3,
+            466.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_c3_zakat_payroll",
+          "label": "C3 Zakat melalui potongan gaji",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            471.0,
+            555.3,
+            481.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_c4_approved_donations",
+          "label": "C4 Derma / hadiah / sumbangan diluluskan",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            486.1,
+            555.3,
+            496.7
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_c5a_tp1_relief",
+          "label": "C5(a) Pelepasan melalui TP1",
+          "page": 1,
+          "rect_top_left_points": [
+            356.7,
+            516.6,
+            477.5,
+            527.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_c5b_tp1_zakat",
+          "label": "C5(b) Zakat selain potongan gaji",
+          "page": 1,
+          "rect_top_left_points": [
+            356.7,
+            531.7,
+            477.5,
+            542.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_c6_child_relief",
+          "label": "C6 Jumlah pelepasan anak layak",
+          "page": 1,
+          "rect_top_left_points": [
+            487.5,
+            546.9,
+            555.3,
+            557.5
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_d1_epf_contribution",
+          "label": "D1 KWSP - caruman pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            118.5,
+            601.8,
+            219.3,
+            612.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_d2_socso_contribution",
+          "label": "D2 PERKESO - caruman pekerja",
+          "page": 1,
+          "rect_top_left_points": [
+            377.5,
+            601.8,
+            478.4,
+            612.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_e1_type",
+          "label": "E1 Jenis elaun/perkuisit/pemberian/manfaat",
+          "page": 1,
+          "rect_top_left_points": [
+            69.3,
+            656.5,
+            196.8,
+            667.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_e1_amount",
+          "label": "E1 Jumlah dikecualikan",
+          "page": 1,
+          "rect_top_left_points": [
+            206.2,
+            656.5,
+            293.6,
+            667.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_e3_type",
+          "label": "E3 Jenis elaun/perkuisit/pemberian/manfaat",
+          "page": 1,
+          "rect_top_left_points": [
+            332.7,
+            656.5,
+            460.2,
+            667.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_e3_amount",
+          "label": "E3 Jumlah dikecualikan",
+          "page": 1,
+          "rect_top_left_points": [
+            469.7,
+            656.5,
+            557.2,
+            667.1
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_e2_type",
+          "label": "E2 Jenis elaun/perkuisit/pemberian/manfaat",
+          "page": 1,
+          "rect_top_left_points": [
+            69.3,
+            671.7,
+            196.8,
+            682.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_e2_amount",
+          "label": "E2 Jumlah dikecualikan",
+          "page": 1,
+          "rect_top_left_points": [
+            206.2,
+            671.7,
+            293.6,
+            682.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_e4_type",
+          "label": "E4 Jenis elaun/perkuisit/pemberian/manfaat",
+          "page": 1,
+          "rect_top_left_points": [
+            332.7,
+            671.7,
+            460.2,
+            682.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_e4_amount",
+          "label": "E4 Jumlah dikecualikan",
+          "page": 1,
+          "rect_top_left_points": [
+            469.7,
+            671.7,
+            557.2,
+            682.3
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "right"
+        },
+        {
+          "name": "ec_officer_name",
+          "label": "Nama Pegawai",
+          "page": 1,
+          "rect_top_left_points": [
+            317.2,
+            709.4,
+            540.5,
+            720.0
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_officer_position",
+          "label": "Jawatan Pegawai",
+          "page": 1,
+          "rect_top_left_points": [
+            317.2,
+            722.6,
+            540.5,
+            733.2
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_employer_name_address_1",
+          "label": "Nama dan Alamat Majikan baris 1",
+          "page": 1,
+          "rect_top_left_points": [
+            317.2,
+            735.8,
+            540.5,
+            746.4
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_employer_name_address_2",
+          "label": "Nama dan Alamat Majikan baris 2",
+          "page": 1,
+          "rect_top_left_points": [
+            317.2,
+            749.0,
+            540.5,
+            759.6
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_form_date",
+          "label": "Tarikh",
+          "page": 1,
+          "rect_top_left_points": [
+            68.1,
+            762.2,
+            182.2,
+            772.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        },
+        {
+          "name": "ec_employer_phone",
+          "label": "No. Telefon Majikan",
+          "page": 1,
+          "rect_top_left_points": [
+            317.2,
+            762.2,
+            540.5,
+            772.8
+          ],
+          "type": "text",
+          "multiline": false,
+          "align": "left"
+        }
+      ]
+    }
+  }
+}
