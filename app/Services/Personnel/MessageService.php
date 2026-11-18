@@ -4,8 +4,9 @@ namespace App\Services\Personnel;
 
 use App\Models\Personnel\Message;
 use App\Models\System\User;
+use Closure;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
-use Illuminate\Database\Query\Builder;
 use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\Storage;
@@ -30,18 +31,19 @@ class MessageService
      */
     public function getRecentUsers(string $authId): Collection
     {
-        $recentUserIds = User::query()
-            ->whereIn('id', function (Builder $query) use ($authId): void {
-                $query->select('sender_id')
-                    ->from('messages')
-                    ->where('receiver_id', $authId)
-                    ->union(
-                        Message::query()
-                            ->select('receiver_id')
-                            ->where('sender_id', $authId)
-                    );
-            })
-            ->pluck('id');
+        // Both directions now go through Eloquent so the sidebar honours the
+        // global soft delete and the viewer's per-message hides consistently.
+        $incomingUserIds = Message::query()
+            ->where('receiver_id', $authId)
+            ->whereDoesntHave('deletions', $this->hiddenBy($authId))
+            ->pluck('sender_id');
+
+        $outgoingUserIds = Message::query()
+            ->where('sender_id', $authId)
+            ->whereDoesntHave('deletions', $this->hiddenBy($authId))
+            ->pluck('receiver_id');
+
+        $recentUserIds = $incomingUserIds->concat($outgoingUserIds)->unique()->values();
 
         $users = User::query()->whereIn('id', $recentUserIds)->orderBy('name')->get();
 
@@ -50,17 +52,20 @@ class MessageService
                 ->where('sender_id', $user->id)
                 ->where('receiver_id', $authId)
                 ->where('is_read', false)
+                ->whereDoesntHave('deletions', $this->hiddenBy($authId))
                 ->count();
 
             $lastMessage = Message::query()
-                ->where(function ($q) use ($authId, $user) {
-                    $q->where('sender_id', $authId)
-                        ->where('receiver_id', $user->id);
+                ->where(function ($q) use ($authId, $user): void {
+                    $q->where(function ($pair) use ($authId, $user): void {
+                        $pair->where('sender_id', $authId)
+                            ->where('receiver_id', $user->id);
+                    })->orWhere(function ($pair) use ($authId, $user): void {
+                        $pair->where('sender_id', $user->id)
+                            ->where('receiver_id', $authId);
+                    });
                 })
-                ->orWhere(function ($q) use ($authId, $user) {
-                    $q->where('sender_id', $user->id)
-                        ->where('receiver_id', $authId);
-                })
+                ->whereDoesntHave('deletions', $this->hiddenBy($authId))
                 ->latest()
                 ->first();
 
@@ -81,14 +86,16 @@ class MessageService
     {
         return Message::query()
             ->with(['parent.sender'])
-            ->where(function ($q) use ($authId, $otherUserId) {
-                $q->where('sender_id', $authId)
-                    ->where('receiver_id', $otherUserId);
+            ->where(function ($q) use ($authId, $otherUserId): void {
+                $q->where(function ($pair) use ($authId, $otherUserId): void {
+                    $pair->where('sender_id', $authId)
+                        ->where('receiver_id', $otherUserId);
+                })->orWhere(function ($pair) use ($authId, $otherUserId): void {
+                    $pair->where('sender_id', $otherUserId)
+                        ->where('receiver_id', $authId);
+                });
             })
-            ->orWhere(function ($q) use ($authId, $otherUserId) {
-                $q->where('sender_id', $otherUserId)
-                    ->where('receiver_id', $authId);
-            })
+            ->whereDoesntHave('deletions', $this->hiddenBy($authId))
             ->oldest()
             ->get();
     }
@@ -99,6 +106,7 @@ class MessageService
             ->where('sender_id', $senderId)
             ->where('receiver_id', $receiverId)
             ->where('is_read', false)
+            ->whereDoesntHave('deletions', $this->hiddenBy($receiverId))
             ->update(['is_read' => true]);
     }
 
@@ -136,11 +144,33 @@ class MessageService
         ]);
     }
 
-    public function deleteMessage(Message $message, string $authId): bool
+    /**
+     * Hide a message from one participant only. The row and its attachment stay
+     * intact for the other participant.
+     */
+    public function deleteMessageForMe(Message $message, string $authId): bool
+    {
+        if ($message->sender_id !== $authId && $message->receiver_id !== $authId) {
+            return false;
+        }
+
+        $message->hideFor($authId);
+
+        return true;
+    }
+
+    /**
+     * Recall a message for both participants. Sender only, because removing
+     * another user's message from their view is not allowed.
+     */
+    public function deleteMessageForEveryone(Message $message, string $authId): bool
     {
         if ($message->sender_id !== $authId) {
             return false;
         }
+
+        // No per-user markers are meaningful once the row is gone globally.
+        $message->deletions()->delete();
 
         if ($message->attachment && Storage::disk('public')->exists($message->attachment)) {
             Storage::disk('public')->delete($message->attachment);
@@ -149,6 +179,18 @@ class MessageService
         $message->delete();
 
         return true;
+    }
+
+    /**
+     * Filter for "the current viewer has not hidden this message".
+     *
+     * @return Closure(Builder): void
+     */
+    private function hiddenBy(string $userId): Closure
+    {
+        return static function ($query) use ($userId): void {
+            $query->where('user_id', $userId);
+        };
     }
 
     /**

@@ -27,8 +27,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card h-100 border-0 shadow-sm">
-        <div class="card-body d-flex flex-row p-0" style="height: 75vh">
+    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+        <div class="card-body d-flex flex-row gap-0 p-0" style="height: 75vh">
             <!-- Left Sidebar: Conversations & User Selector -->
             <div class="col-4 border-end d-flex flex-column overflow-auto bg-1">
                 <div class="border-bottom d-flex justify-content-between align-items-center p-3">

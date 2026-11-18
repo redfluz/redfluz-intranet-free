@@ -1,0 +1,25 @@
+// =============================================================================
+// PAGE LAYOUT — Bootstrap 6 is the source of truth
+// =============================================================================
+//
+// <main class="content-col p-6 md:p-7 flex-grow-1"> owns the page gutter with
+// STOCK Bootstrap 6 spacing utilities (p-6 = 1.25rem, md:p-7 = 1.5rem).
+//
+// Views used to wrap content in .container, .container-fluid, bare .card,
+// .dashboard-wrapper etc., each adding its own gutter/max-width. This file is
+// only a compatibility shim: it neutralises that FIRST wrapper so Bootstrap's
+// utility on <main> is the single source of page padding. Nested cards, grids
+// and containers keep their own normal Bootstrap spacing.
+
+.content-col > :is(.container, .container-fluid, .dashboard-wrapper, .td-page) {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+    padding: 0;
+}
+
+.content-col > .card {
+    width: 100%;
+    max-width: none;
+    margin-inline: 0;
+}

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container py-4">
+    <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="md:col-8">
                 @if ($user->must_change_password)

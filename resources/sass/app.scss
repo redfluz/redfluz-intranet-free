@@ -26,6 +26,7 @@
 @use 'candidate';
 @use 'inventory-dashboard';
 @use 'auth';
+@use 'page-layout';
 
 .sortable-handle {
     display: inline-flex;

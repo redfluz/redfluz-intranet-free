@@ -28,8 +28,11 @@ namespace App\Http\Controllers\Personnel;
 
 use App\Constants\FlashMessage;
 use App\Enums\FileResources;
+use App\Enums\MessageDeletionMode;
+use App\Events\MessageDeleted;
 use App\Events\MessageSent;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Personnel\Message\DeleteMessageRequest;
 use App\Http\Requests\Personnel\Message\SendMessageRequest;
 use App\Models\Personnel\Message;
 use App\Models\System\User;
@@ -119,16 +122,33 @@ class MessageController extends Controller
     }
 
     /**
-     * Remove a single message resource by its object.
+     * Hide a message for the current user, or recall it for both users.
      *
+     * @param  DeleteMessageRequest  $request  Validates the deletion mode.
      * @param  Message  $message  The message resource instance.
      * @return JsonResponse Returns JSON status.
      */
-    public function destroyMessage(Message $message): JsonResponse
+    public function destroyMessage(DeleteMessageRequest $request, Message $message): JsonResponse
     {
-        if (! $this->messageService->deleteMessage($message, (string) (auth()->id() ?? ''))) {
+        /** @var MessageDeletionMode $mode */
+        $mode = MessageDeletionMode::from($request->validated('mode'));
+        $authId = (string) (auth()->id() ?? '');
+
+        $deleted = $mode === MessageDeletionMode::ME
+            ? $this->messageService->deleteMessageForMe($message, $authId)
+            : $this->messageService->deleteMessageForEveryone($message, $authId);
+
+        if (! $deleted) {
             return response()->json(['status' => 'error', 'message' => 'Unauthorized'], 403);
         }
+
+        broadcast(new MessageDeleted(
+            $message->id,
+            $mode->value,
+            $authId,
+            $message->sender_id,
+            $message->receiver_id,
+        ));
 
         return response()->json(['status' => 'success']);
     }
@@ -141,7 +161,8 @@ class MessageController extends Controller
      */
     public function destroyConversation(User $user): RedirectResponse
     {
-        // Soft delete: clears the thread but keeps the contact in the sidebar.
+        // Soft delete: clears the thread for both users; the contact then
+        // leaves the recent list because both message directions are scoped.
         $this->messageService->deleteConversation((string) (auth()->id() ?? ''), $user->id);
 
         return redirect()

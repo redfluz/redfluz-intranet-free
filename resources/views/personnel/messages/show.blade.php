@@ -27,8 +27,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card h-100 border-0 shadow-sm">
-        <div class="card-body d-flex flex-row p-0" style="height: 75vh">
+    <div class="card h-100 border-0 shadow-sm overflow-hidden">
+        <div class="card-body d-flex flex-row gap-0 p-0" style="height: 75vh">
             <!-- Left Sidebar -->
             <div class="col-4 border-end d-flex flex-column overflow-auto bg-1">
                 <div class="border-bottom d-flex justify-content-between align-items-center p-3">
@@ -44,10 +44,10 @@
                     @forelse ($recentUsers as $recent)
                         <div
                             class="list-group-item list-group-item-action d-flex align-items-center justify-content-between {{ $recent['user']->id === $user->id ? 'active' : '' }} p-2">
-                            <a class="d-flex align-items-center flex-grow-1 text-decoration-none {{ $recent['user']->id === $user->id ? 'text-white' : 'fg-body' }} me-2"
+                            <a class="d-flex align-items-center flex-grow-1 text-decoration-none me-2"
                                 href="{{ route('personnel.messages.show', $recent['user']->name) }}">
                                 <i data-lucide="user-circle"
-                                    class="{{ $recent['user']->id === $user->id ? 'text-white' : 'fg-secondary' }} me-2"
+                                    class="me-2"
                                     style="width: 1.5em; height: 1.5em"></i>
                                 <div>
                                     <div class="fw-semibold">{{ $recent['user']->name }}</div>
@@ -60,7 +60,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <button
-                                    class="btn btn-sm {{ $recent['user']->id === $user->id ? 'text-white' : 'fg-danger' }} border-0 bg-transparent p-1"
+                                    class="btn btn-sm {{ $recent['user']->id === $user->id ? '' : 'fg-danger' }} border-0 bg-transparent p-1"
                                     type="submit" onclick="event.stopPropagation()">
                                     <i data-lucide="x" style="width: 1.25em; height: 1.25em"></i>
                                 </button>
@@ -76,7 +76,7 @@
             </div>
 
             <!-- Right Side Stream -->
-            <div class="col-8 d-flex flex-column position-relative">
+            <div class="chat-column col-8 d-flex flex-column position-relative">
                 <div class="border-bottom fw-bold d-flex align-items-center justify-content-between bg-1 p-3">
                     <div class="d-flex align-items-center">
                         <i data-lucide="user-circle" class="fg-primary me-2" style="width: 1.25em; height: 1.25em"></i>
@@ -95,16 +95,15 @@
                 </div>
 
                 <!-- Messages Stream -->
-                <div class="flex-grow-1 overflow-auto p-3" id="messages-box">
+                <div class="chat-stream flex-grow-1 overflow-auto" id="messages-box">
                     @foreach ($messages as $msg)
                         <div class="d-flex {{ $msg->sender_id === Auth::id() ? 'justify-content-end' : 'justify-content-start' }} group-msg mb-2"
                             id="message-item-{{ $msg->id }}">
-                            <div class="rounded-5 position-relative {{ $msg->sender_id === Auth::id() ? 'bg-primary text-white' : 'bg-1 border' }} p-2 px-3"
+                            <div class="chat-bubble rounded-5 position-relative {{ $msg->sender_id === Auth::id() ? 'bg-primary chat-bubble-out' : 'bg-1 border' }} p-2 px-3"
                                 style="max-width: 70%">
                                 <!-- Quoted Message Preview -->
                                 @if ($msg->parent)
-                                    <div
-                                        class="border-start {{ $msg->sender_id === Auth::id() ? 'bg-1 fg-body border-dark' : 'bg-1 border-primary' }} small mb-2 rounded-3 border-4 p-2">
+                                    <div class="chat-quote small mb-2 rounded-3 p-2">
                                         <div class="fw-bold fs-7">
                                             {{ $msg->parent->sender->name ?? __('messages.labels.user') }}
                                         </div>
@@ -148,17 +147,22 @@
                                 @endif
 
                                 <!-- Message Actions (Reply / Single Delete) -->
-                                <div class="d-flex justify-content-end fs-7 mt-1 gap-2 opacity-75">
-                                    <button class="btn btn-link text-reset text-decoration-none p-0" type="button"
-                                        onclick='quoteMessage({{ Illuminate\Support\Js::from($msg->id) }}, {{ Illuminate\Support\Js::from($msg->sender_id === Auth::id() ? __('messages.labels.you') : $user->name) }}, {{ Illuminate\Support\Js::from($msg->message ?? __('messages.labels.attachment')) }})'>
+                                <div class="chat-actions d-flex justify-content-end fs-7 mt-1 gap-2">
+                                    <button class="chat-action" type="button" data-chat-action="reply"
+                                        data-message-id="{{ $msg->id }}"
+                                        data-sender="{{ $msg->sender_id === Auth::id() ? __('messages.labels.you') : $user->name }}"
+                                        data-text="{{ $msg->message ?? __('messages.labels.attachment') }}"
+                                        title="{{ __('messages.actions.reply') }}"
+                                        aria-label="{{ __('messages.actions.reply') }}">
                                         <i data-lucide="reply"></i>
                                     </button>
-                                    @if ($msg->sender_id === Auth::id())
-                                        <button class="btn btn-link text-reset text-decoration-none p-0" type="button"
-                                            onclick='deleteSingleMessage({{ Illuminate\Support\Js::from($msg->id) }})'>
-                                            <i data-lucide="trash-2"></i>
-                                        </button>
-                                    @endif
+                                    <button class="chat-action" type="button" data-chat-action="delete"
+                                        data-message-id="{{ $msg->id }}"
+                                        data-own="{{ $msg->sender_id === Auth::id() ? '1' : '0' }}"
+                                        title="{{ __('messages.actions.delete') }}"
+                                        aria-label="{{ __('messages.actions.delete') }}">
+                                        <i data-lucide="trash-2"></i>
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -269,8 +273,11 @@
             <button class="btn btn-solid theme-secondary" data-bs-dismiss="dialog" type="button">
                 {{ __('common.actions.cancel') }}
             </button>
-            <button class="btn btn-solid theme-danger" type="button" id="confirmDeleteMessage">
-                {{ __('common.alerts.confirm_delete_yes') }}
+            <button class="btn btn-solid theme-secondary" type="button" id="deleteForMe">
+                {{ __('messages.actions.delete_for_me') }}
+            </button>
+            <button class="btn btn-solid theme-danger" type="button" id="deleteForEveryone">
+                {{ __('messages.actions.delete_for_everyone') }}
             </button>
         </div>
     </dialog>
@@ -280,6 +287,80 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/emoji-picker-element@^1/index.js"></script>
 
     <style>
+        /* Let the message stream scroll inside the flex column instead of
+           stretching the card past its 75vh height. */
+        .chat-column,
+        .chat-stream {
+            min-height: 0;
+        }
+
+        .chat-stream {
+            overscroll-behavior: contain;
+            padding: 1rem 1.25rem 1.5rem;
+            scrollbar-gutter: stable;
+        }
+
+        /* --primary-contrast follows the selected palette: dark ink on the
+           pastel default, white on saturated blue palettes. Hardcoded
+           .text-white washed out on the default blue bubble. */
+        .chat-bubble-out {
+            color: var(--primary-contrast);
+        }
+
+        /* Quoted/replied message keeps its own surface and ink regardless of
+           the bubble colour, so it stays readable in every palette. */
+        .chat-quote {
+            background-color: var(--bg-1);
+            border: 0;
+            border-inline-start: 4px solid var(--primary-base);
+            color: var(--fg-body);
+        }
+
+        /* Icons must follow the bubble ink, not .btn-link's --link-color.
+           In electric_blast the link hover colour IS the bubble colour, so
+           the reply/trash icons vanished on hover. `color: inherit` gives
+           white on outgoing bubbles, body ink on incoming ones, in every
+           palette. */
+        /* 44x44 hit area for touch, with a 20px icon. Colour still inherits
+           the bubble ink, so the icons read on both sides in every palette. */
+        .chat-action {
+            align-items: center;
+            background: none;
+            border: 0;
+            border-radius: 999px;
+            color: inherit;
+            cursor: pointer;
+            display: inline-flex;
+            font: inherit;
+            height: 44px;
+            justify-content: center;
+            line-height: 1;
+            padding: 0;
+            width: 44px;
+        }
+
+        .chat-action:hover,
+        .chat-action:focus-visible,
+        .chat-action:active {
+            background-color: color-mix(in srgb, currentColor 12%, transparent);
+            color: inherit;
+        }
+
+        .chat-action:focus-visible {
+            outline: 2px solid currentColor;
+            outline-offset: 2px;
+        }
+
+        .chat-action svg {
+            color: currentColor;
+            height: 20px;
+            width: 20px;
+        }
+
+        .chat-actions {
+            opacity: 1;
+        }
+
         .chat-image > a:first-child {
             display: block;
         }
@@ -320,16 +401,10 @@
             confirmDeleteMessage: {{ Illuminate\Support\Js::from(__('messages.confirm.delete_message')) }},
             downloadFile: {{ Illuminate\Support\Js::from(__('messages.actions.download_file')) }},
             fileTooLarge: {{ Illuminate\Support\Js::from(__('messages.errors.file_too_large')) }},
+            reply: {{ Illuminate\Support\Js::from(__('messages.actions.reply')) }},
+            delete: {{ Illuminate\Support\Js::from(__('messages.actions.delete')) }},
             user: {{ Illuminate\Support\Js::from(__('messages.labels.user')) }},
             you: {{ Illuminate\Support\Js::from(__('messages.labels.you')) }},
-        };
-
-        const inlineArgument = function(value) {
-            return JSON.stringify(value)
-                .replaceAll('&', '\\u0026')
-                .replaceAll("'", '\\u0027')
-                .replaceAll('<', '\\u003c')
-                .replaceAll('>', '\\u003e');
         };
 
         const escapeHtml = function(value) {
@@ -367,35 +442,71 @@
             quotePreview.classList.remove('d-flex');
         });
 
-        // --- Delete Single Message ---
-        window.deleteSingleMessage = function(id) {
-            const deleteModal = document.getElementById('deleteMessageModal');
-            const confirmBtn = document.getElementById('confirmDeleteMessage');
+        // --- Delete Single Message (for me / for everyone) ---
+        const deleteModal = document.getElementById('deleteMessageModal');
+        const deleteForMeBtn = document.getElementById('deleteForMe');
+        const deleteForEveryoneBtn = document.getElementById('deleteForEveryone');
+        const destroyMessageUrl =
+            {{ Illuminate\Support\Js::from(route('personnel.messages.destroy-message', ['message' => '__MESSAGE_ID__'])) }};
+        let pendingDelete = null;
 
-            const handleConfirm = () => {
-                bootstrap.Dialog.getInstance(deleteModal).hide();
-                confirmBtn.removeEventListener('click', handleConfirm);
-
-                const destroyMessageUrl =
-                    {{ Illuminate\Support\Js::from(route('personnel.messages.destroy-message', ['message' => '__MESSAGE_ID__'])) }};
-                fetch(destroyMessageUrl.replace('__MESSAGE_ID__', encodeURIComponent(id)), {
-                        method: 'DELETE',
-                        headers: {
-                            'X-CSRF-TOKEN': "{{ csrf_token() }}",
-                        },
-                    })
-                    .then((res) => res.json())
-                    .then((data) => {
-                        if (data.status === 'success') {
-                            const elem = document.getElementById(`message-item-${id}`);
-                            if (elem) elem.remove();
-                        }
-                    });
-            };
-
-            confirmBtn.addEventListener('click', handleConfirm);
+        window.deleteSingleMessage = function(id, own) {
+            pendingDelete = { id: id };
+            // Only the sender may recall a message for everyone.
+            deleteForEveryoneBtn.classList.toggle('d-none', !own);
             bootstrap.Dialog.getOrCreateInstance(deleteModal).show();
         };
+
+        deleteModal.addEventListener('hidden.bs.dialog', function() {
+            pendingDelete = null;
+        });
+
+        const submitDelete = function(mode) {
+            if (!pendingDelete) return;
+
+            const id = pendingDelete.id;
+            pendingDelete = null;
+            bootstrap.Dialog.getInstance(deleteModal)?.hide();
+
+            fetch(destroyMessageUrl.replace('__MESSAGE_ID__', encodeURIComponent(id)), {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'X-CSRF-TOKEN': "{{ csrf_token() }}",
+                    },
+                    body: JSON.stringify({ mode: mode }),
+                })
+                .then((res) => res.json())
+                .then((data) => {
+                    if (data.status === 'success') {
+                        document.getElementById(`message-item-${id}`)?.remove();
+                    }
+                });
+        };
+
+        deleteForMeBtn.addEventListener('click', function() {
+            submitDelete('me');
+        });
+        deleteForEveryoneBtn.addEventListener('click', function() {
+            submitDelete('everyone');
+        });
+
+        // --- Chat action buttons (delegated) ---
+        // One listener covers server-rendered bubbles and messages appended
+        // later by Echo or the send form. No inline handlers to break.
+        messageBox.addEventListener('click', function(event) {
+            const button = event.target.closest('[data-chat-action]');
+            if (!button || !messageBox.contains(button)) return;
+
+            const id = button.dataset.messageId;
+            if (!id) return;
+
+            if (button.dataset.chatAction === 'reply') {
+                window.quoteMessage(id, button.dataset.sender, button.dataset.text);
+            } else if (button.dataset.chatAction === 'delete') {
+                window.deleteSingleMessage(id, button.dataset.own === '1');
+            }
+        });
 
         // --- Emoji Picker Logic ---
         const emojiToggleBtn = document.getElementById('emoji-toggle-btn');
@@ -464,7 +575,7 @@
             if (msg.parent) {
                 const senderName = msg.parent.sender ? msg.parent.sender.name : window.messageTranslations.user;
                 quoteHtml = `
- <div class="p-2 mb-2 rounded-3 border-start border-4 bg-1 border-primary small">
+ <div class="chat-quote p-2 mb-2 rounded-3 small">
  <div class="fw-bold fs-7">${escapeHtml(senderName)}</div>
  <div class="text-truncate">${escapeHtml(msg.parent.message || window.messageTranslations.attachment)}</div>
  </div>`;
@@ -486,9 +597,12 @@
  ${quoteHtml}
  ${msg.message ? `<div>${escapeHtml(msg.message)}</div>` : ''}
  ${attachmentHtml}
- <div class="mt-1 d-flex justify-content-end gap-2 fs-7 opacity-75">
- <button type="button" class="btn btn-link p-0 text-reset text-decoration-none" onclick='quoteMessage(${inlineArgument(msg.id)}, ${inlineArgument(window.activeChatPartnerName)}, ${inlineArgument(msg.message || window.messageTranslations.attachment)})'>
+ <div class="chat-actions mt-1 d-flex justify-content-end gap-2 fs-7">
+ <button type="button" class="chat-action" data-chat-action="reply" data-message-id="${escapeHtml(msg.id)}" data-sender="${escapeHtml(window.activeChatPartnerName)}" data-text="${escapeHtml(msg.message || window.messageTranslations.attachment)}" title="${escapeHtml(window.messageTranslations.reply)}" aria-label="${escapeHtml(window.messageTranslations.reply)}">
  <i data-lucide="reply"></i>
+ </button>
+ <button type="button" class="chat-action" data-chat-action="delete" data-message-id="${escapeHtml(msg.id)}" data-own="0" title="${escapeHtml(window.messageTranslations.delete)}" aria-label="${escapeHtml(window.messageTranslations.delete)}">
+ <i data-lucide="trash-2"></i>
  </button>
  </div>
  </div>`;
@@ -543,7 +657,7 @@
                                 msg.parent.sender.name :
                                 window.messageTranslations.user;
                             quoteHtml = `
- <div class="p-2 mb-2 rounded-3 border-start border-4 bg-1 fg-body border-dark small">
+ <div class="chat-quote p-2 mb-2 rounded-3 small">
  <div class="fw-bold fs-7">${escapeHtml(senderName)}</div>
  <div class="text-truncate">${escapeHtml(msg.parent.message || window.messageTranslations.attachment)}</div>
  </div>`;
@@ -561,15 +675,15 @@
                         }
 
                         wrapper.innerHTML = `
- <div class="p-2 px-3 rounded-5 bg-primary text-white" style="max-width: 70%;">
+ <div class="chat-bubble chat-bubble-out p-2 px-3 rounded-5 bg-primary" style="max-width: 70%;">
  ${quoteHtml}
  ${msg.message ? `<div>${escapeHtml(msg.message)}</div>` : ''}
  ${attachmentHtml}
- <div class="mt-1 d-flex justify-content-end gap-2 fs-7 opacity-75">
- <button type="button" class="btn btn-link p-0 text-reset text-decoration-none" onclick='quoteMessage(${inlineArgument(msg.id)}, ${inlineArgument(window.messageTranslations.you)}, ${inlineArgument(msg.message || window.messageTranslations.attachment)})'>
+ <div class="chat-actions mt-1 d-flex justify-content-end gap-2 fs-7">
+ <button type="button" class="chat-action" data-chat-action="reply" data-message-id="${escapeHtml(msg.id)}" data-sender="${escapeHtml(window.messageTranslations.you)}" data-text="${escapeHtml(msg.message || window.messageTranslations.attachment)}" title="${escapeHtml(window.messageTranslations.reply)}" aria-label="${escapeHtml(window.messageTranslations.reply)}">
  <i data-lucide="reply"></i>
  </button>
- <button type="button" class="btn btn-link p-0 text-reset text-decoration-none" onclick='deleteSingleMessage(${inlineArgument(msg.id)})'>
+ <button type="button" class="chat-action" data-chat-action="delete" data-message-id="${escapeHtml(msg.id)}" data-own="1" title="${escapeHtml(window.messageTranslations.delete)}" aria-label="${escapeHtml(window.messageTranslations.delete)}">
  <i data-lucide="trash-2"></i>
  </button>
  </div>

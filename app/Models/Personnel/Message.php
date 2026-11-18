@@ -63,6 +63,7 @@ use Spatie\Activitylog\Support\LogOptions;
  * @property-read User|null $receiver
  * @property-read Message|null $parent
  * @property-read Collection<int, Message> $replies
+ * @property-read Collection<int, MessageDeletion> $deletions
  * @property-read Collection<int, Activity> $activities
  * @property-read Collection<int, Activity> $activitiesAsCauser
  * @property-read Collection<int, Activity> $activitiesAsSubject
@@ -136,6 +137,32 @@ class Message extends Model
     public function replies(): HasMany
     {
         return $this->hasMany(self::class, 'parent_id');
+    }
+
+    /**
+     * One row per participant who hid this message from their own view.
+     *
+     * @return HasMany<MessageDeletion, $this>
+     */
+    public function deletions(): HasMany
+    {
+        return $this->hasMany(MessageDeletion::class);
+    }
+
+    /**
+     * Whether this message is hidden from the given user's view.
+     */
+    public function hiddenFor(string $userId): bool
+    {
+        return $this->deletions()->where('user_id', $userId)->exists();
+    }
+
+    /**
+     * Hide this message from the given user's view only.
+     */
+    public function hideFor(string $userId): void
+    {
+        $this->deletions()->firstOrCreate(['user_id' => $userId]);
     }
 
     /**

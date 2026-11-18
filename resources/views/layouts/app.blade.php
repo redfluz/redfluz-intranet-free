@@ -34,7 +34,7 @@
         </header>
 
         <!-- Main Content Area -->
-        <main class="content-col md:p-4 flex-grow-1 p-3">
+        <main class="content-col p-6 md:p-7 flex-grow-1">
             @yield('content')
         </main>
     </div>
@@ -100,6 +100,16 @@
                         badge.classList.remove('d-none');
                     }
                     window.playNotificationSound();
+                });
+
+                window.Echo.private('user.{{ Auth::id() }}').listen('.MessageDeleted', (event) => {
+                    // "For me" only affects the tab of the user who deleted;
+                    // "for everyone" affects both participants.
+                    if (event.mode !== 'everyone' && String(event.userId) !== '{{ Auth::id() }}') {
+                        return;
+                    }
+
+                    document.getElementById(`message-item-${event.messageId}`)?.remove();
                 });
             });
         </script>

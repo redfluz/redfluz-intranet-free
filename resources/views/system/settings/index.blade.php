@@ -36,7 +36,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="card md:col-10 mx-auto border-0 shadow-sm">
+    <div class="card border-0 shadow-sm">
         <div class="card-header bg-white py-3">
             <h4 class="fw-bold m-0">{{ __('settings.title') }}</h4>
             <p class="fg-secondary small mb-0">{{ __('settings.subtitle') }}</p>

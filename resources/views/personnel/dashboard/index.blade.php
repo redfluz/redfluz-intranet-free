@@ -12,8 +12,8 @@
 @endphp
 
 @section('content')
-    <div class="dashboard-wrapper px-md-4 px-3 py-4">
-        <div class="container-fluid max-w-7xl">
+    <div class="dashboard-wrapper">
+        <div>
             <div class="row g-4">
                 {{-- LEFT COLUMN (75%) - MAIN NEWS FEED --}}
                 <div class="lg:col-8 col-12">
